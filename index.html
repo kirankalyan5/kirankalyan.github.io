@@ -6,17 +6,38 @@
   <title>Kiran Kalyankumar | Software Engineering Lead</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <script src="https://unpkg.com/framer-motion@9/dist/framer-motion.min.js"></script>
+  <style>
+    .fade-in {
+      opacity: 0;
+      animation: fadeIn 1s ease-in forwards;
+    }
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+      }
+    }
+    .hover-scale {
+      transition: transform 0.3s ease;
+    }
+    .hover-scale:hover {
+      transform: scale(1.05);
+    }
+  </style>
 </head>
 <body class="bg-gray-900 text-gray-300 font-sans">
+  <!-- Header Section -->
   <header class="bg-gray-800 p-6">
     <div class="max-w-4xl mx-auto">
-      <h1 class="text-4xl font-bold text-white">Kiran Kalyankumar</h1>
-      <p class="text-xl mt-2">Seasoned Software Engineering Lead | Expert in Frontend Development</p>
+      <h1 class="text-4xl font-bold text-white fade-in">Kiran Kalyankumar</h1>
+      <p class="text-xl mt-2 fade-in">Seasoned Software Engineering Lead | Expert in Frontend Development</p>
     </div>
   </header>
-  
+
+  <!-- Main Content -->
   <main class="max-w-4xl mx-auto p-6">
-    <section id="about" class="mb-10">
+    <!-- About Me Section -->
+    <section id="about" class="mb-10 fade-in">
       <h2 class="text-3xl font-bold text-white">About Me</h2>
       <p class="mt-4">
         I bring over <strong>11+ years of experience</strong> in frontend development, architecture, and engineering management. 
@@ -24,8 +45,9 @@
         high-performance web and mobile applications while fostering innovation within teams.
       </p>
     </section>
-    
-    <section id="skills" class="mb-10">
+
+    <!-- Skills Section -->
+    <section id="skills" class="mb-10 fade-in">
       <h2 class="text-3xl font-bold text-white">Technical Skills</h2>
       <div class="mt-4 flex flex-wrap gap-4">
         <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" alt="React">
@@ -37,18 +59,80 @@
         <img src="https://img.shields.io/badge/Jest-C21325?style=for-the-badge&logo=jest&logoColor=white" alt="Jest">
       </div>
     </section>
-    
-    <section id="contact" class="mb-10">
+
+    <!-- Experience Section -->
+    <section id="experience" class="mb-10 fade-in">
+      <h2 class="text-3xl font-bold text-white">Experience</h2>
+      <div class="mt-4 space-y-6">
+        <!-- Experience Card 1 -->
+        <div class="p-6 bg-gray-800 rounded-lg hover-scale">
+          <h3 class="text-2xl font-bold text-white">Software Engineering Lead/Manager</h3>
+          <p class="text-gray-400">Elsevier | Amsterdam, Netherlands | 10/2023 - Present</p>
+          <ul class="mt-4 list-disc list-inside">
+            <li>Lead a multidisciplinary team of backend, frontend, QA engineers, and UX designers.</li>
+            <li>Oversee architecture and strategic product planning, ensuring alignment with business goals.</li>
+            <li>Pioneer cost-optimization initiatives within AWS environments.</li>
+          </ul>
+        </div>
+        <!-- Experience Card 2 -->
+        <div class="p-6 bg-gray-800 rounded-lg hover-scale">
+          <h3 class="text-2xl font-bold text-white">Principal Software Engineer</h3>
+          <p class="text-gray-400">Elsevier | Amsterdam, Netherlands | 04/2022 - 10/2023</p>
+          <ul class="mt-4 list-disc list-inside">
+            <li>Spearheaded front-end domain architecture for multiple products.</li>
+            <li>Migrated large monolithic web applications to micro front-end architecture.</li>
+            <li>Collaborated with tech principals across Data, Backend, and Quality sectors.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="mb-10 fade-in">
+      <h2 class="text-3xl font-bold text-white">Projects</h2>
+      <div class="mt-4 grid grid-cols-1 md:grid-cols-2 gap-6">
+        <!-- Project Card 1 -->
+        <div class="p-6 bg-gray-800 rounded-lg hover-scale">
+          <h3 class="text-2xl font-bold text-white">React Native Segmented Control Tab</h3>
+          <p class="text-gray-400 mt-2">A customizable segmented control tab for React Native.</p>
+          <a href="https://github.com/kirankalyan5/react-native-segmented-control-tab" class="mt-4 inline-block text-blue-400 hover:underline">View on GitHub</a>
+        </div>
+        <!-- Project Card 2 -->
+        <div class="p-6 bg-gray-800 rounded-lg hover-scale">
+          <h3 class="text-2xl font-bold text-white">Micro Frontend Architecture</h3>
+          <p class="text-gray-400 mt-2">Migrated monolithic applications to micro frontend architecture.</p>
+          <a href="#" class="mt-4 inline-block text-blue-400 hover:underline">Learn More</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="mb-10 fade-in">
       <h2 class="text-3xl font-bold text-white">Contact</h2>
-      <p class="mt-4">📍 Hoofddorp, Netherlands</p>
-      <p>Email: <a href="mailto:kiransinbox1@gmail.com" class="text-blue-400">kiransinbox1@gmail.com</a></p>
-      <p>GitHub: <a href="https://github.com/kirankalyan5" class="text-blue-400">github.com/kirankalyan5</a></p>
-      <p>LinkedIn: <a href="https://www.linkedin.com/in/kiran-kalyankumar-b4405359/" class="text-blue-400">linkedin.com/in/kiran-kalyankumar</a></p>
+      <div class="mt-4 space-y-2">
+        <p>📍 Hoofddorp, Netherlands</p>
+        <p>Email: <a href="mailto:kiransinbox1@gmail.com" class="text-blue-400 hover:underline">kiransinbox1@gmail.com</a></p>
+        <p>GitHub: <a href="https://github.com/kirankalyan5" class="text-blue-400 hover:underline">github.com/kirankalyan5</a></p>
+        <p>LinkedIn: <a href="https://www.linkedin.com/in/kiran-kalyankumar-b4405359/" class="text-blue-400 hover:underline">linkedin.com/in/kiran-kalyankumar</a></p>
+      </div>
     </section>
   </main>
-  
+
+  <!-- Footer -->
   <footer class="bg-gray-800 p-4">
     <p class="text-center text-gray-500">© 2025 Kiran Kalyankumar. All rights reserved.</p>
   </footer>
+
+  <!-- Framer Motion Script -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const fadeElements = document.querySelectorAll(".fade-in");
+      fadeElements.forEach((el, index) => {
+        setTimeout(() => {
+          el.style.opacity = 1;
+        }, index * 200); // Staggered fade-in effect
+      });
+    });
+  </script>
 </body>
 </html>
